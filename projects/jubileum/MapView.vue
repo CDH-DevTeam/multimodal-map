@@ -120,7 +120,7 @@ watch(showGrid, (newValue) => {
           :key="showGrid.toString()"
         >
           <template #layers>
-        
+            <ol-attribution-control />
           
             <DianaPlaceLayer path="jubileum/geojson/place/" :params="placeParams">
               <ol-style>
@@ -136,8 +136,10 @@ watch(showGrid, (newValue) => {
           
             <ol-tile-layer>
               <ol-source-xyz
+                attributions='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 url="https://data.dh.gu.se/tiles/gbg_1921b/{z}/{x}/{y}.png"
-              />
+              ></ol-source-xyz>
+              
             </ol-tile-layer>
             
           </template>
@@ -169,7 +171,9 @@ watch(showGrid, (newValue) => {
   width:100%;
 }
 
-#gallery{}
+.ol-attribution.ol-uncollapsible {
+  right: 200px !important;
+}
 
 .ui-overlay {
 margin-top: 20px;

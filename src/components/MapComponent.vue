@@ -16,7 +16,7 @@
 
   
     <!-- <ol-fullscreen-control v-if="fullscreencontrol" /> -->
-    <!--<ol-attribution-control v-if="attributioncontrol" /> -->
+    <ol-attribution-control v-if="attributioncontrol" />
     <!-- <ol-overviewmap-control v-if="overviewmapcontrol">
       <ol-tile-layer>
         <ol-source-osm />
@@ -58,7 +58,7 @@ const projectedCenter = fromLonLat(config.center, projection.value);
 
 // Controls
 const fullscreencontrol = ref(true);
-const attributioncontrol = ref(true);
+const attributioncontrol = ref(false);
 const zoomcontrol = ref(true);
 const zoomslidercontrol = ref(true);
 const scalelinecontrol = ref(true);
